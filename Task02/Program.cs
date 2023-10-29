@@ -29,7 +29,7 @@ namespace Task02
                     for (int j = 0; j < matrix.GetLength(1); j++)
                     {
                         printElement = Convert.ToString(matrix[i, j]);
-                        printElement = printElement.PadRight(maxLen);
+                        printElement = printElement.PadRight(maxLen + 1);
                         Console.Write(printElement);
                     }
                     Console.WriteLine();
@@ -67,7 +67,7 @@ namespace Task02
                     sumDiagonal1 += Math.Abs(matrix[i, i]);
                 }
                 int sumDiagonal2 = 0;
-                for (int i = matrix.GetLength(0); i > 0; i--)
+                for (int i = matrix.GetLength(0) - 1; i > 0; i--)
                 {
                     sumDiagonal2 += Math.Abs(matrix[i, i]);
                 }
